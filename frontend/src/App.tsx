@@ -1,8 +1,6 @@
-import './styles/App.css';
-
 function App() {
     return (
-        <div>
+        <div className="flex justify-center items-center">
             <h1>COMPAS</h1>
         </div>
     );
