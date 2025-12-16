@@ -18,10 +18,10 @@ export const Accordion: React.FC = () => {
     };
 
     return (
-        <div className="max-w-[390px] mr-4 ml-4 flex flex-col gap-2">
-            <h3 className="text-xl font-bold mb-2 pl-4">
+        <div className="max-w-[390px]  flex flex-col gap-2">
+            <h2 className="text-xl font-bold mb-2 pl-4">
                 Вопрос — <span className="text-[#bb88eb] ">ответ</span>
-            </h3>
+            </h2>
 
             <div className="border border-[#eeebf4] rounded-lg px-4 pb-4 max-w-[350px] bg-white">
                 {(accordionData as AccordionItemData[]).map((item, index) => {
@@ -38,9 +38,7 @@ export const Accordion: React.FC = () => {
                             </div>
 
                             <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-96' : 'max-h-0'}`}>
-                                <p className="py-2 text-[#26222b] font-light text-xs whitespace-pre-line max-w-[318px] text-justify">
-                                    {item.answer}
-                                </p>
+                                <p className="py-4 text-[#26222b]  whitespace-pre-line max-w-[318px]  p5">{item.answer}</p>
                             </div>
                         </div>
                     );
