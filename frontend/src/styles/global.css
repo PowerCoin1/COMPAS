@@ -1,1 +1,7 @@
 @import 'tailwindcss';
+
+@import 'tailwindcss';
+
+body {
+    @apply bg-gray-50 px-5 mx-auto max-w-[390px];
+}

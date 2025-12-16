@@ -23,7 +23,7 @@ export const Accordion: React.FC = () => {
                 Вопрос — <span className="text-[#bb88eb] ">ответ</span>
             </h3>
 
-            <div className="border border-[#eeebf4] rounded-lg px-4 pb-4 min-w-[350px]">
+            <div className="border border-[#eeebf4] rounded-lg px-4 pb-4 max-w-[350px] bg-white">
                 {(accordionData as AccordionItemData[]).map((item, index) => {
                     const isOpen = openItemIndex === index;
 
