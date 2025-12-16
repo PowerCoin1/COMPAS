@@ -16,12 +16,16 @@ export const Header = () => {
         <>
             <header
                 className="
+                max-w-[390px]
+                mx-auto
                 sticky 
                 top-8   
                 z-50        
                 mt-8    
                 mx-5    
-                mb-4    
+                mb-4  
+                mr-4
+                ml-4  
                 flex items-center justify-between
                 box-border
                 h-12    

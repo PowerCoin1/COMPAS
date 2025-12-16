@@ -56,6 +56,8 @@ export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
             {/*ВЫДВИЖНОЕ МЕНЮ*/}
             <div
                 className={`
+                                    max-w-[390px]
+                mx-auto
                     fixed left-0 top-5
                     h-[calc(100vh-40px)]
                     w-[calc(100vw-16px)] min-w-93.5                   
