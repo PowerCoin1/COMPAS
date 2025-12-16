@@ -1,3 +1,5 @@
+import { Accordion } from '../../components/Accordion';
+
 export const HomePage = () => {
-    return <div>HomePage</div>;
+    return <Accordion />;
 };
