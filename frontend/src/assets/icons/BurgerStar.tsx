@@ -1,0 +1,7 @@
+export const BurgerStar = () => {
+    return (
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 0L9.58392 6.41608L16 8L9.58392 9.58392L8 16L6.41608 9.58392L0 8L6.41608 6.41608L8 0Z" fill="white" />
+        </svg>
+    );
+};
