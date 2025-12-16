@@ -1,8 +1,17 @@
+import { Route, Routes } from 'react-router-dom';
+
+import { MainLayout } from './features/MainLayout';
+import { HomePage } from './pages/HomePage';
+import { LoginPage } from './pages/LoginPage';
+
 function App() {
     return (
-        <div className="flex justify-center items-center">
-            <h1>COMPAS</h1>
-        </div>
+        <Routes>
+            <Route path="/" element={<MainLayout />}>
+                <Route index element={<HomePage />} />
+                <Route path="/login" element={<LoginPage />} />
+            </Route>
+        </Routes>
     );
 }
 
