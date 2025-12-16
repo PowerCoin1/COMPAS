@@ -5,31 +5,18 @@ import { Button } from '../shared/ui/Button/Button';
 type Slide = {
     id: number;
     text: string;
-    details: string;
 };
 
-// Пока что 3 одинаковых слайда — можно будет заменить текст позже
 const slides: Slide[] = [
-    {
-        id: 1,
-        text: '"Компас" - Ваш надежный друг на пути к успешному будущему',
-        details: 'Расширенное описание первого слайда. Здесь будет текст о продукте/сервисе.',
-    },
-    {
-        id: 2,
-        text: '"Компас" - Ваш надежный друг на пути к успешному будущему',
-        details: 'Текст для второго слайда. Можно рассказать о преимуществах.',
-    },
-    {
-        id: 3,
-        text: '"Компас" - Ваш надежный друг на пути к успешному будущему',
-        details: 'Текст для третьего слайда. Например, кейс или сценарий использования.',
-    },
-    {
-        id: 3,
-        text: '"Компас" - Ваш надежный друг на пути к успешному будущему',
-        details: 'Текст для третьего слайда. Например, кейс или сценарий использования.',
-    },
+    { id: 1, text: '"Компас" - Ваш надежный друг на пути к успешному будущему' },
+    { id: 2, text: '"Компас" - Ваш надежный друг на пути к успешному будущему' },
+    { id: 3, text: '"Компас" - Ваш надежный друг на пути к успешному будущему' },
+    { id: 4, text: '"Компас" - Ваш надежный друг на пути к успешному будущему' },
+];
+
+const detailsText = [
+    '«Компас» - это не сайт, и не просто медиаконтент – это целая экосистема, которая превращает разрозненные усилия в единую систему притяжения и удержания кадров в регионе.',
+    'Мы соединяем студента, вуз и компанию на одной цифровой платформе через гибкие стажировки, прозрачное целевое обучение, современное медиа и рейтинг работодателей. И самое главное, проект будет самоокупаемым.',
 ];
 
 export const Carousel: React.FC = () => {
@@ -42,21 +29,34 @@ export const Carousel: React.FC = () => {
         if (index > lastIndex) index = 0;
 
         setCurrentIndex(index);
-        setIsDetailsOpen(false); // при смене слайда сворачиваем "Подробнее"
+        setIsDetailsOpen(false);
     };
 
     const currentSlide = slides[currentIndex];
 
     return (
         <div className="w-full max-w-xl mx-auto">
-            {/* Карточка с текстом и нижней панелью */}
-            <div className="rounded-md border border-gray-100 overflow-hidden bg-[--color-secondary] flex flex-col">
+            <div className="rounded-md border border-gray-100 overflow-hidden bg-[--color-secondary] flex flex-col transition-all duration-500 ease-in-out">
                 {/* Текст слайда */}
-                <div className="px-8 py-10 flex-1 flex items-center">
-                    <p className="text-base h4 md:text-lg font-medium text-gray-900 leading-relaxed">{currentSlide.text}</p>
+                <div className="px-4 py-10 flex-1">
+                    <p className="text-base md:text-lg font-medium leading-relaxed">{currentSlide.text}</p>
                 </div>
 
-                {/* Нижняя панель: точки, стрелки, кнопка */}
+                {/* Блок "Подробнее" */}
+                {isDetailsOpen && (
+                    <div
+                        className={`p-4 bg-white text-sm text-gray-800 transition-all duration-500 ease-in-out
+                        ${isDetailsOpen ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 -translate-y-4 scale-95 pointer-events-none'}`}
+                    >
+                        {detailsText.map((paragraph, idx) => (
+                            <p key={idx} className="mb-4">
+                                {paragraph}
+                            </p>
+                        ))}
+                    </div>
+                )}
+
+                {/* Нижняя панель */}
                 <div className="bg-white px-6 py-4">
                     {/* Точки */}
                     <div className="flex justify-center mb-4 gap-2">
@@ -71,9 +71,8 @@ export const Carousel: React.FC = () => {
                         ))}
                     </div>
 
-                    {/* Стрелки и кнопка "Подробнее" */}
+                    {/* Стрелки и кнопка */}
                     <div className="flex items-center gap-4">
-                        {/* Левая стрелка */}
                         <button
                             type="button"
                             onClick={() => goTo(currentIndex - 1)}
@@ -84,12 +83,10 @@ export const Carousel: React.FC = () => {
                             <span className="-ml-px -mt-px">&lt;</span>
                         </button>
 
-                        {/* Кнопка Подробнее (Button) */}
                         <Button color="red" size="md" className="flex-1" onClick={() => setIsDetailsOpen((prev) => !prev)}>
                             Подробнее
                         </Button>
 
-                        {/* Правая стрелка */}
                         <button
                             type="button"
                             onClick={() => goTo(currentIndex + 1)}
@@ -102,9 +99,6 @@ export const Carousel: React.FC = () => {
                     </div>
                 </div>
             </div>
-            {isDetailsOpen && (
-                <div className="mt-4 p-4 rounded-xl border border-gray-200 bg-white text-sm text-gray-800">{currentSlide.details}</div>
-            )}
         </div>
     );
 };
