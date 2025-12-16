@@ -61,7 +61,7 @@ textarea {
     --radius-xl: 40px;
 }
 
-/* Heading Styles */
+/* Heading Styles
 h1 {
     font-size: 20px;
     font-family: 'Noto Sans', sans-serif;
@@ -93,7 +93,7 @@ h5 {
 }
 
 /* Paragraph Styles */
-.p1 {
+/* .p1 {
     font-size: 20px;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 500;
@@ -121,4 +121,4 @@ h5 {
     font-size: 12px;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 300;
-}
+}  */
