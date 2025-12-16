@@ -24,8 +24,7 @@ export const Header = () => {
                 mt-8    
                 mx-5    
                 mb-4  
-                mr-4
-                ml-4  
+
                 flex items-center justify-between
                 box-border
                 h-12    

@@ -21,11 +21,8 @@ const sizeVariant = {
 
 export function Button({ onClick, color = 'red', size = 'md', children, className }: ButtonProps) {
     return (
-        <button
-            className={`${colorVariant[color]} ${sizeVariant[size]} w-full rounded-full text-white text-sm ${className}`}
-            onClick={onClick}
-        >
-            {children}
+        <button className={`${colorVariant[color]} ${sizeVariant[size]} w-full rounded-full text-white  ${className}`} onClick={onClick}>
+            <span className="text-sm">{children}</span>
         </button>
     );
 }
