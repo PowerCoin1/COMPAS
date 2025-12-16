@@ -64,8 +64,8 @@ export const Carousel: React.FC = () => {
                             <button
                                 key={slide.id}
                                 onClick={() => goTo(index)}
-                                className={`h-1.5 w-1.5 rounded-full transition 
-                  ${index === currentIndex ? 'bg-purple-600' : 'bg-gray-300'}`}
+                                className={`h-1.5 w-1.5 rounded-full mx-1 transition 
+                                    ${index === currentIndex ? 'bg-dark-purple' : 'bg-light-purple'}`}
                                 aria-label={`Перейти к слайду ${index + 1}`}
                             />
                         ))}
@@ -77,10 +77,10 @@ export const Carousel: React.FC = () => {
                             type="button"
                             onClick={() => goTo(currentIndex - 1)}
                             className="w-10 h-10 rounded-full border-2 flex items-center justify-center transition
-                border-dark-purple text-dark-purple
-                hover:bg-dark-purple hover:text-white"
+                    border-dark-purple text-dark-purple
+                    hover:bg-dark-purple hover:text-white"
                         >
-                            <span className="-ml-px">&lt;</span>
+                            <span className="-ml-px -mt-px">&lt;</span>
                         </button>
 
                         <Button color="red" size="md" className="flex-1" onClick={() => setIsDetailsOpen((prev) => !prev)}>
@@ -91,10 +91,10 @@ export const Carousel: React.FC = () => {
                             type="button"
                             onClick={() => goTo(currentIndex + 1)}
                             className="w-10 h-10 rounded-full border-2 flex items-center justify-center transition
-                border-dark-purple text-dark-purple
-                hover:bg-dark-purple hover:text-white"
+                                border-dark-purple text-dark-purple
+                    hover:bg-dark-purple hover:text-white"
                         >
-                            <span className="ml-px">&gt;</span>
+                            <span className="ml-px -mt-px">&gt;</span>
                         </button>
                     </div>
                 </div>

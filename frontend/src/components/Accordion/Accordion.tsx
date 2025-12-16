@@ -19,12 +19,12 @@ export const Accordion: React.FC = () => {
     };
 
     return (
-        <div className="max-w-[390px]  flex flex-col gap-2">
-            <h2 className="text-xl font-bold mb-2 pl-4">
-                Вопрос — <span className="text-[#bb88eb] ">ответ</span>
+        <div className="max-w-87.5  flex flex-col gap-2">
+            <h2 className="text-xl font-bold mb-2 mt-4 pl-4">
+                Вопрос — <span className="text-bright-purple">ответ</span>
             </h2>
 
-            <div className="border border-[#eeebf4] rounded-lg px-4 pb-4 max-w-[350px] bg-white">
+            <div className="border border-secondary rounded-lg px-4 pb-4 max-w-87.5 bg-white">
                 <div>
                     {(accordionData as AccordionItemData[]).map((item, index) => {
                         const isOpen = openItemIndex === index;
@@ -34,7 +34,7 @@ export const Accordion: React.FC = () => {
                                 <div className="flex justify-between items-center  cursor-pointer py-4" onClick={() => toggleItem(index)}>
                                     <h4 className="font-semibold text-sm text-gray-800 ">{item.question}</h4>
 
-                                    <span className="text-2xl font-light text-[#ff3131] transition-transform duration-300">
+                                    <span className="text-2xl font-light text-red transition-transform duration-300">
                                         {isOpen ? <MinusIcon /> : <PlusIcon />}
                                     </span>
                                 </div>
@@ -42,7 +42,7 @@ export const Accordion: React.FC = () => {
                                 <div
                                     className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-96' : 'max-h-0'}`}
                                 >
-                                    <p className="py-4 text-[#26222b]  whitespace-pre-line max-w-[318px]  p5">{item.answer}</p>
+                                    <p className="py-4 text-dark  whitespace-pre-line max-w-79.5 p5">{item.answer}</p>
                                 </div>
                             </div>
                         );
