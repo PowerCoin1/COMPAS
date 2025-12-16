@@ -25,6 +25,11 @@ const slides: Slide[] = [
         text: '"Компас" - Ваш надежный друг на пути к успешному будущему',
         details: 'Текст для третьего слайда. Например, кейс или сценарий использования.',
     },
+    {
+        id: 3,
+        text: '"Компас" - Ваш надежный друг на пути к успешному будущему',
+        details: 'Текст для третьего слайда. Например, кейс или сценарий использования.',
+    },
 ];
 
 export const Carousel: React.FC = () => {
@@ -45,21 +50,21 @@ export const Carousel: React.FC = () => {
     return (
         <div className="w-full max-w-xl mx-auto">
             {/* Карточка с текстом и нижней панелью */}
-            <div className="rounded-md border border-gray-300 overflow-hidden bg-[#F5F3FA] flex flex-col">
+            <div className="rounded-md border border-gray-100 overflow-hidden bg-[--color-secondary] flex flex-col">
                 {/* Текст слайда */}
                 <div className="px-8 py-10 flex-1 flex items-center">
-                    <p className="text-base md:text-lg font-medium text-gray-900 leading-relaxed">{currentSlide.text}</p>
+                    <p className="text-base h4 md:text-lg font-medium text-gray-900 leading-relaxed">{currentSlide.text}</p>
                 </div>
 
                 {/* Нижняя панель: точки, стрелки, кнопка */}
                 <div className="bg-white px-6 py-4">
                     {/* Точки */}
-                    <div className="flex justify-center mb-3">
+                    <div className="flex justify-center mb-4 gap-2">
                         {slides.map((slide, index) => (
                             <button
                                 key={slide.id}
                                 onClick={() => goTo(index)}
-                                className={`h-2 w-2 rounded-full mx-1 transition
+                                className={`h-1.5 w-1.5 rounded-full mx-1 transition 
                                     ${index === currentIndex ? 'bg-purple-600' : 'bg-gray-300'}`}
                                 aria-label={`Перейти к слайду ${index + 1}`}
                             />
@@ -72,14 +77,14 @@ export const Carousel: React.FC = () => {
                         <button
                             type="button"
                             onClick={() => goTo(currentIndex - 1)}
-                            className="w-10 h-10 rounded-full border-2 border-purple-600 text-purple-600 flex items-center justify-center
-                            transition hover:bg-purple-50
-                    active:bg-purple-600 active:text-white"
+                            className="w-10 h-10 rounded-full border-2 flex items-center justify-center transition
+                    [border-color:var(--color-dark-purple)] [color:var(--color-dark-purple)]
+                    hover:[background-color:var(--color-dark-purple)] hover:text-white"
                         >
                             <span className="-ml-px">&lt;</span>
                         </button>
 
-                        {/* Кнопка Подробнее (твой Button) */}
+                        {/* Кнопка Подробнее (Button) */}
                         <Button color="red" size="md" className="flex-1" onClick={() => setIsDetailsOpen((prev) => !prev)}>
                             Подробнее
                         </Button>
@@ -88,10 +93,9 @@ export const Carousel: React.FC = () => {
                         <button
                             type="button"
                             onClick={() => goTo(currentIndex + 1)}
-                            className="w-10 h-10 rounded-full border-2 border-purple-600
-                                text-purple-600 flex items-center justify-center
-                                transition hover:bg-purple-50
-                                active:bg-purple-600 active:text-white"
+                            className="w-10 h-10 rounded-full border-2 flex items-center justify-center transition
+                                [border-color:var(--color-dark-purple)] [color:var(--color-dark-purple)]
+                                hover:bg-dark-purple hover:text-white"
                         >
                             <span className="ml-px">&gt;</span>
                         </button>
