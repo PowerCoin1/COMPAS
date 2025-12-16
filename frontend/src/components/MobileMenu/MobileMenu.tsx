@@ -23,7 +23,7 @@ export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                     Программы целевого <br /> обучения
                 </>
             ),
-            path: '/programs',
+            path: '/program',
         },
         { title: 'Статистика', path: '/stats' },
         { title: 'Помощь в трудоустройстве ветеранам СВО', path: '/help' },
@@ -63,7 +63,7 @@ export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                     w-[calc(100vw-16px)] min-w-93.5                   
                     bg-white 
                     ${isOpen ? 'shadow-2xl' : 'shadow-none'}                   
-                    border-y border-r border-[#eeebf4] border-l-0
+                    border-y border-r border-secondary border-l-0
                     rounded-r-lg
                     flex flex-col
                     transform transition-transform duration-300 ease-in-out

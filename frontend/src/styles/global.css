@@ -49,6 +49,7 @@ body {
     --text-lg: 16px;
     --text-md: 14px;
     --text-sm: 12px;
+    --text-xsm: 11px;
 
     /* Custom theme breakpoints */
     --breakpoint-sm: 360px;

@@ -65,7 +65,7 @@ export const Carousel: React.FC = () => {
                                 key={slide.id}
                                 onClick={() => goTo(index)}
                                 className={`h-1.5 w-1.5 rounded-full mx-1 transition 
-                                    ${index === currentIndex ? 'bg-purple-600' : 'bg-gray-300'}`}
+                                    ${index === currentIndex ? 'bg-dark-purple' : 'bg-light-purple'}`}
                                 aria-label={`Перейти к слайду ${index + 1}`}
                             />
                         ))}
@@ -78,10 +78,10 @@ export const Carousel: React.FC = () => {
                             type="button"
                             onClick={() => goTo(currentIndex - 1)}
                             className="w-10 h-10 rounded-full border-2 flex items-center justify-center transition
-                    [border-color:var(--color-dark-purple)] [color:var(--color-dark-purple)]
-                    hover:[background-color:var(--color-dark-purple)] hover:text-white"
+                    border-dark-purple text-dark-purple
+                    hover:bg-dark-purple hover:text-white"
                         >
-                            <span className="-ml-px">&lt;</span>
+                            <span className="-ml-px -mt-px">&lt;</span>
                         </button>
 
                         {/* Кнопка Подробнее (Button) */}
@@ -94,10 +94,10 @@ export const Carousel: React.FC = () => {
                             type="button"
                             onClick={() => goTo(currentIndex + 1)}
                             className="w-10 h-10 rounded-full border-2 flex items-center justify-center transition
-                                [border-color:var(--color-dark-purple)] [color:var(--color-dark-purple)]
-                                hover:bg-dark-purple hover:text-white"
+                                border-dark-purple text-dark-purple
+                    hover:bg-dark-purple hover:text-white"
                         >
-                            <span className="ml-px">&gt;</span>
+                            <span className="ml-px -mt-px">&gt;</span>
                         </button>
                     </div>
                 </div>
