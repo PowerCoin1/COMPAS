@@ -1,1 +1,124 @@
 @import 'tailwindcss';
+
+button {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+input {
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+textarea {
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+@theme {
+    /* Custom theme colors */
+    --color-dark: #26222b;
+    --color-white: #ffffff;
+    --color-gray: #a8a6aa;
+
+    /* 1 */
+    --color-dark-purple: #3c096c;
+    --color-red: #ff3131;
+    --color-secondary: #eeebf4;
+    --color-lavender: #f0dfff;
+
+    /* 2 */
+    --color-purple: #8c64d8;
+    --color-light-purple: #ded6ee;
+    --color-bright-purple: #bb88eb;
+    --color-primary: #f6f7fa;
+
+    /* 3 */
+    --color-green: #3fc357;
+    --color-blue: #5057d3;
+
+    /* hover dh - dark-hover */
+    --color-dh-red: #da2a2a;
+    --color-dh-purple: #6e2cac;
+
+    /* Custom theme text */
+    --text-xl: 20px;
+    --text-lg: 16px;
+    --text-md: 14px;
+    --text-sm: 12px;
+
+    /* Custom theme font-family */
+    --font-noto-sans: 'Noto Sans', sans-serif;
+
+    /* Custom theme breakpoints */
+    --breakpoint-sm: 360px;
+    --breakpoint-md: 390px;
+    --breakpoint-lg: 420px;
+
+    /* Custom theme radius */
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-lg: 8px;
+    --radius-xl: 40px;
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 20px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 20px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 16px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 14px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 600;
+}
+
+h5 {
+    font-size: 12px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 500;
+}
+
+/* Paragraph Styles */
+.p1 {
+    font-size: 20px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 500;
+}
+
+.p2 {
+    font-size: 16px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 300;
+}
+
+.p3 {
+    font-size: 16px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 500;
+}
+
+.p4 {
+    font-size: 14px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 300;
+}
+
+.p5 {
+    font-size: 12px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 300;
+}
