@@ -114,7 +114,7 @@ export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                                                 flex items-center justify-between w-full
                                                 text-[20px] font-medium 
                                                 transition-colors 
-                                                outline-none  hover:text-purple-600 focus:text-purple-600
+                                                outline-none  hover:text-[#8c64d8] focus:text-[#8c64d8]
                                             `}
                                         >
                                             {/* Текст ссылки */}
