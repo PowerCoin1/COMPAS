@@ -1,78 +1,7 @@
-// import { VerificationIcon } from '../../assets/icons/VerificationIcon';
-// import { Button } from '../../shared/ui';
-// import styles from './VacancyCardDetailed.module.css';
-// interface VacancyCardDetailedProps {
-//     title: string;
-//     salaryAmount?: string;
-//     salaryComment?: string;
-//     tags: string[];
-//     companyName: string;
-//     rating: number;
-//     reviewsCount: number;
-//     location: string;
-//     description: string[];
-//     onApply?: () => void;
-// }
-// export const VacancyCardDetailed: React.FC<VacancyCardDetailedProps> = ({
-//     title,
-//     salaryAmount,
-//     salaryComment,
-//     tags,
-//     companyName,
-//     rating,
-//     reviewsCount,
-//     location,
-//     description,
-//     onApply,
-// }) => {
-//     return (
-//         <div className={styles.card}>
-//             <h3 className={styles.title}>{title}</h3>
-//             {/* Блок зарплаты */}
-//             <div className={styles.salaryRow}>
-//                 <span className={styles.salaryAmount}>{salaryAmount}</span>
-//                 {salaryComment && <span className={styles.salaryComment}> {salaryComment}</span>}
-//             </div>
-//             {/* Теги (опыт, удаленка) */}
-//             <div className={styles.tagsContainer}>
-//                 {tags.map((tag, index) => (
-//                     <span key={index} className={styles.tag}>
-//                         {tag}
-//                     </span>
-//                 ))}
-//             </div>
-//             {/* Компания */}
-//             <div className={styles.companyRow}>
-//                 <span className={styles.companyName}>{companyName}</span>
-//                 {/* Иконка верификации (синяя галочка) */}
-//                 <VerificationIcon className={styles.verifiedIcon} />
-//             </div>
-//             {/* Рейтинг */}
-//             <div className={styles.ratingRow}>
-//                 <span className={styles.star}>★</span>
-//                 <span className={styles.ratingValue}>{rating}</span>
-//                 <span className={styles.dot}>•</span>
-//                 <span className={styles.reviewsCount}>{reviewsCount} отзывов</span>
-//             </div>
-//             <div className={styles.location}>{location}</div>
-//             {/* Описание (параграфы) */}
-//             <div className={styles.description}>
-//                 {description.map((text, idx) => (
-//                     <p key={idx}>{text}</p>
-//                 ))}
-//             </div>
-//             <Button color="red" size="sm" onClick={onApply}>
-//                 Откликнуться
-//             </Button>
-//         </div>
-//     );
-// };
 import React from 'react';
 
 import { VerificationIcon } from '../../assets/icons/VerificationIcon';
 import { Button } from '../../shared/ui';
-
-// import styles from './VacancyCardDetailed.module.css'; // Удаляем
 
 interface VacancyCardDetailedProps {
     title: string;
