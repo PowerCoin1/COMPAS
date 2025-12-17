@@ -6,6 +6,7 @@ import { AssistancePage } from './pages/AssistancePage';
 import { HomePage } from './pages/HomePage';
 import { LoginPage } from './pages/LoginPage';
 import { ProgramPage } from './pages/ProgramPage';
+import { StatsPage } from './pages/StatsPage/StatsPage';
 import { VacancyPage } from './pages/VacancyPage';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/vacancies" element={<VacancyPage />} />
                 <Route path="/loginpage" element={<ProfileForm />} />
+                <Route path="/stats" element={<StatsPage />} />
             </Route>
         </Routes>
     );
