@@ -14,7 +14,7 @@ const AboutSection = () => {
                     <p className="text-gray-700  flex-1 p5">{firstParagraph}</p>
 
                     <div
-                        className="shrink-0 -mr-3 -mt-3 w-[158px] h-[128px] rounded-tr-lg bg-cover bg-top"
+                        className="shrink-0 -mr-3 -mt-3 w-39.5 h-32 rounded-tr-lg bg-cover bg-top"
                         style={{ backgroundImage: `url(${aboutData.image})` }}
                     ></div>
                 </div>

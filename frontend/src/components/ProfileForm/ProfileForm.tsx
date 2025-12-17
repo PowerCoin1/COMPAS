@@ -4,9 +4,9 @@ import { Input } from '../../shared/ui/Input/Input';
 
 export const ProfileForm = () => {
     return (
-        <form className="max-w-[390px] mx-auto bg-white p-4">
+        <form className="max-w-97.5 mx-auto bg-white p-4">
             <div className="flex gap-4 mb-6">
-                <div className="w-[110px] h-[140px] shrink-0  rounded-md overflow-hidden relative flex items-end justify-center">
+                <div className="w-27.5 h-35 shrink-0  rounded-md overflow-hidden relative flex items-end justify-center">
                     <img src={ProfilePreviewImg} alt="Место для фото" />
                 </div>
 
@@ -18,7 +18,7 @@ export const ProfileForm = () => {
                 </div>
             </div>
 
-            <h3 className="text-xl font-semibold text-dark mb-4">Контактные данные</h3>
+            <h3 className="text-xl font-semibold mb-4">Контактные данные</h3>
 
             <div className="flex flex-col gap-4 mb-12 font-normal text-sm">
                 <Input label="Номер телефона" placeholder="+7 ....." type="tel" />

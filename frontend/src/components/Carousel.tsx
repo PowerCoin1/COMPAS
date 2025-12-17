@@ -1,17 +1,21 @@
 import React, { useState } from 'react';
 
+import carouselImage1 from '../assets/images/carousel1.png';
+import carouselImage2 from '../assets/images/carousel2.png';
+import carouselImage3 from '../assets/images/carousel3.png';
+import carouselImage4 from '../assets/images/carousel4.png';
 import { Button } from '../shared/ui/Button/Button';
 
 type Slide = {
     id: number;
-    text: string;
+    image: string;
 };
 
 const slides: Slide[] = [
-    { id: 1, text: '"Компас" - Ваш надежный друг на пути к успешному будущему' },
-    { id: 2, text: '"Компас" - Ваш надежный друг на пути к успешному будущему' },
-    { id: 3, text: '"Компас" - Ваш надежный друг на пути к успешному будущему' },
-    { id: 4, text: '"Компас" - Ваш надежный друг на пути к успешному будущему' },
+    { id: 1, image: carouselImage1 },
+    { id: 2, image: carouselImage2 },
+    { id: 3, image: carouselImage3 },
+    { id: 4, image: carouselImage4 },
 ];
 
 const detailsText = [
@@ -36,16 +40,16 @@ export const Carousel: React.FC = () => {
 
     return (
         <div className="w-full max-w-xl mx-auto">
-            <div className="rounded-md border border-gray-100 overflow-hidden bg-[--color-secondary] flex flex-col transition-all duration-500 ease-in-out">
-                {/* Текст слайда */}
+            <div className="rounded-md border border-secondary overflow-hidden bg-secondary flex flex-col transition-all duration-500 ease-in-out">
+                {/* Изображение слайда */}
                 <div className="px-4 py-10 flex-1">
-                    <p className="text-base md:text-lg font-medium leading-relaxed">{currentSlide.text}</p>
+                    <img src={currentSlide.image} alt="Слайд" className="w-full h-auto object-cover rounded-md" />
                 </div>
 
                 {/* Блок "Подробнее" */}
                 {isDetailsOpen && (
                     <div
-                        className={`p-4 bg-white text-sm text-gray-800 transition-all duration-500 ease-in-out
+                        className={`p-4 bg-white text-sm transition-all duration-500 ease-in-out
                         ${isDetailsOpen ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 -translate-y-4 scale-95 pointer-events-none'}`}
                     >
                         {detailsText.map((paragraph, idx) => (

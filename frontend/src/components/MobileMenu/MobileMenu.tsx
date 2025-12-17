@@ -56,7 +56,7 @@ export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
             {/*ВЫДВИЖНОЕ МЕНЮ*/}
             <div
                 className={`
-                                    max-w-[390px]
+                                    max-w-97.5
                 mx-auto
                     fixed left-0 top-5
                     h-[calc(100vh-40px)]
@@ -100,9 +100,9 @@ export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                                             ${
                                                 isActive
                                                     ? /* Активный: Градиент, белый текст, скругление справа */
-                                                      'bg-linear-to-r from-transparent to-[#bb88eb] rounded-r-[50px] '
+                                                      'bg-linear-to-r from-transparent to-bright-purple rounded-r-[50px] '
                                                     : /* Неактивный: Бордер снизу, серый текст */
-                                                      'text-gray-800 border-b border-transparent [border-image:linear-gradient(90deg,#bb88eb_0%,rgba(187,136,235,0)_100%)_1]'
+                                                      ' border-b border-transparent [border-image:linear-gradient(90deg,#bb88eb_0%,rgba(187,136,235,0)_100%)_1]'
                                             }
                                         `}
                                     >
@@ -116,7 +116,7 @@ export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                                                 flex items-center justify-between w-full
                                                 text-[20px] font-medium 
                                                 transition-colors 
-                                                outline-none  hover:text-[#8c64d8] focus:text-[#8c64d8]
+                                                outline-none  hover:text-purple focus:text-purple
                                             `}
                                         >
                                             {/* Текст ссылки */}

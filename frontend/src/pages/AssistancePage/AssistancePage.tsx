@@ -4,7 +4,7 @@ import assistanceData from './assistanceData.json';
 
 export function AssistancePage() {
     return (
-        <div className="">
+        <div>
             <h2 className="mb-2">
                 <span className="text-bright-purple">Содействие</span> в поиске работы
             </h2>

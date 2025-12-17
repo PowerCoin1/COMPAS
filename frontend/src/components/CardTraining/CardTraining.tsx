@@ -12,18 +12,18 @@ interface CardProps {
 export function CardTraining({ title, university, specialization, workman, Duration, onClick }: CardProps) {
     return (
         <div className="bg-white rounded-lg py-5 px-4 w-full border border-secondary">
-            <h3 className="">{title}</h3>
+            <h3>{title}</h3>
             <div className="flex flex-col gap-2 mt-2 text-sm">
-                <p className="text-dark">
+                <p>
                     Университет: <span className="font-light">{university}</span>
                 </p>
-                <p className="text-dark">
+                <p>
                     Специальность: <span className="font-light">{specialization}</span>
                 </p>
-                <p className="text-dark">
+                <p>
                     Работадатель: <span className="font-light">{workman}</span>
                 </p>
-                <p className="text-dark">
+                <p>
                     Срок обучения: <span className="font-light">{Duration}</span>
                 </p>
             </div>

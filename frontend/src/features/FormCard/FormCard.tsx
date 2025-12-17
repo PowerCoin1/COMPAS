@@ -8,7 +8,7 @@ export function FormCard() {
     return (
         <div className="bg-white rounded-lg py-5 px-4 w-full border border-secondary mt-3">
             <div className="flex flex-col items-center gap-3">
-                <h2 className="">
+                <h2>
                     <span className="text-bright-purple">Форма</span> обратной связи
                 </h2>
                 <form className="flex flex-col gap-3.5 w-full">
@@ -17,7 +17,7 @@ export function FormCard() {
                     <Input typeInpArea="textarea" placeholder="Сообщние" />
                     <div className="flex items-center gap-2.5">
                         <Checkbox />
-                        <div className="text-sm text-dark font-light">
+                        <div className="text-sm  font-light">
                             Я соглашаюсь с{' '}
                             <Link to="/" className="text-blue font-normal">
                                 Пользовательским соглашением
