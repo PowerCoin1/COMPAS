@@ -1,3 +1,4 @@
+import ImageGirl from '../assets/images/image-girl.svg';
 import aboutData from '../content/about.json';
 
 const AboutSection = () => {
@@ -15,7 +16,7 @@ const AboutSection = () => {
 
                     <div
                         className="shrink-0 -mr-3 -mt-3 w-39.5 h-32 rounded-tr-lg bg-cover bg-top"
-                        style={{ backgroundImage: `url(${aboutData.image})` }}
+                        style={{ backgroundImage: `url(${ImageGirl})` }}
                     ></div>
                 </div>
 

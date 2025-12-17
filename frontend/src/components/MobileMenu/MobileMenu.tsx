@@ -137,7 +137,7 @@ export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                 </div>
                 <img src={LogoEmblem} alt="Эмблема" className="absolute right-0 top-1/2 -translate-y-1/2" />
                 {/* Нижняя иконка*/}
-                <BurgerBottomIcon className="absolute bottom-0 left-1/2 -translate-x-1/2" />
+                <BurgerBottomIcon className="absolute bottom-0 left-1/2 -translate-x-1/2 z-[-100]" />
             </div>
         </div>
     );
