@@ -25,19 +25,19 @@ export const QrCodePage = () => {
 
     return (
         <div className="bg-white rounded-lg py-5 px-4 w-full border border-secondary mt-3 mb-3">
-            <h3 className="text-center text-dark">
+            <h3 className="text-center">
                 Подтвердите вход <div className="pt-1">через мессенджер</div>{' '}
                 <div className="pt-4 flex justify-center items-center gap-2">
                     <img src={max} alt="" className="w-6 h-6" />
                     <div> MAX</div>
                 </div>
             </h3>
-            <div className="text-center p4 max-w-63 pt-6 mx-auto text-dark leading-5">
+            <div className="text-center p4 max-w-63 pt-6 mx-auto leading-5">
                 Для подключения этого способа подтверждения отсканируйте QR-код с телефона, на который хотите получать коды для входа
             </div>
             <div className="flex flex-col items-center">
                 <QRCodeSVG value="https://react-my-web-site.vercel.app/" size={140} className="mx-auto mt-6" />
-                <div className="mt-4 text-dark text-center">
+                <div className="mt-4 text-center">
                     <div className="mb-2">Срок действия кода</div> <b>{timeDisplay}</b>
                 </div>
             </div>

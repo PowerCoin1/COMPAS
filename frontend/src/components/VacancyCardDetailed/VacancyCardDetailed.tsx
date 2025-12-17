@@ -29,25 +29,25 @@ export const VacancyCardDetailed: React.FC<VacancyCardDetailedProps> = ({
     onApply,
 }) => {
     return (
-        <div className="bg-white rounded-lg py-5 px-4 max-w-[350px] w-full box-border">
-            <h3 className="font-semibold text-lg text-dark mb-2">{title}</h3>
+        <div className="bg-white rounded-lg py-5 px-4 max-w-87.5 w-full box-border">
+            <h3 className="font-semibold text-lg  mb-2">{title}</h3>
 
             <div className="mb-4 text-[15px]">
                 <span className="text-green font-semibold text-md">{salaryAmount}</span>
 
-                {salaryComment && <span className="text-dark font-light text-sm"> {salaryComment}</span>}
+                {salaryComment && <span className=" font-light text-sm"> {salaryComment}</span>}
             </div>
 
             <div className="flex gap-2 mb-3 flex-wrap">
                 {tags.map((tag, index) => (
-                    <span key={index} className="bg-lavender text-dark rounded-xs py-1 px-1.5 font-normal text-sm tracking-[-0.01em]">
+                    <span key={index} className="bg-lavender  rounded-xs py-1 px-1.5 font-normal text-sm tracking-[-0.01em]">
                         {tag}
                     </span>
                 ))}
             </div>
 
             <div className="flex items-center gap-1 mb-1.5">
-                <span className="font-medium text-sm uppercase text-dark">{companyName}</span>
+                <span className="font-medium text-sm uppercase">{companyName}</span>
 
                 <VerificationIcon className="block" />
             </div>
@@ -62,9 +62,9 @@ export const VacancyCardDetailed: React.FC<VacancyCardDetailedProps> = ({
                 <span className="text-dark/40">{reviewsCount} отзывов</span>
             </div>
 
-            <div className="font-normal text-sm tracking-[-0.01em] text-dark mb-3">{location}</div>
+            <div className="font-normal text-sm tracking-[-0.01em] mb-3">{location}</div>
 
-            <div className="mb-6 text-dark font-light text-sm">
+            <div className="mb-6 font-light text-sm">
                 {description.map((text, idx) => (
                     <p key={idx} className="mb-3 last:mb-0">
                         {text}

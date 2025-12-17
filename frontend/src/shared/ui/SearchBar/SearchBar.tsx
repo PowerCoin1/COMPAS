@@ -10,7 +10,7 @@ interface SearchBarProps {
 export const SearchBar: React.FC<SearchBarProps> = ({ onClick }) => {
     return (
         <div
-            className="flex items-center bg-white border border-secondary rounded-lg py-2.5 px-4 w-full max-w-[350px] cursor-text box-border"
+            className="flex items-center bg-white border border-secondary rounded-lg py-2.5 px-4 w-full max-w-87.5 cursor-text box-border"
             onClick={onClick}
         >
             <SearchIcon className="mr-1 shrink-0" />

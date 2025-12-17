@@ -32,7 +32,7 @@ export const Accordion: React.FC = () => {
                         return (
                             <div key={index} className="border-b last:border-b-0 border-gray-200 ">
                                 <div className="flex justify-between items-center  cursor-pointer py-4" onClick={() => toggleItem(index)}>
-                                    <h4 className="font-semibold text-sm text-gray-800 ">{item.question}</h4>
+                                    <h4 className="font-semibold text-sm">{item.question}</h4>
 
                                     <span className="text-2xl font-light text-red transition-transform duration-300">
                                         {isOpen ? <MinusIcon /> : <PlusIcon />}
@@ -42,7 +42,7 @@ export const Accordion: React.FC = () => {
                                 <div
                                     className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-96' : 'max-h-0'}`}
                                 >
-                                    <p className="py-4 text-dark  whitespace-pre-line max-w-79.5 p5">{item.answer}</p>
+                                    <p className="py-4  whitespace-pre-line max-w-79.5 p5">{item.answer}</p>
                                 </div>
                             </div>
                         );

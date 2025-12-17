@@ -35,7 +35,7 @@ export const Header = () => {
             "
             >
                 <button
-                    className="flex items-center justify-center text-[#26222B] hover:text-gray-600 transition-colors cursor-pointer"
+                    className="flex items-center justify-center hover:text-gray-600 transition-colors cursor-pointer"
                     onClick={toggleMenu}
                 >
                     <BurgerIcon />
@@ -46,12 +46,12 @@ export const Header = () => {
                         <MainLogo />
                     </Link>
 
-                    <span className="text-[20px] font-semibold text-gray-900 leading-none">Компас</span>
+                    <span className="text-[20px] font-semibold leading-none">Компас</span>
 
                     <img src={LogoEmblem} alt="Эмблема" className="w-8 h-8 object-contain" />
                 </div>
 
-                <Link to="/login" className="flex items-center justify-center p-1 text-gray-700 hover:opacity-80 transition-opacity">
+                <Link to="/login" className="flex items-center justify-center p-1 text-dark hover:opacity-80 transition-opacity">
                     <UserIcon />
                 </Link>
             </header>

@@ -12,7 +12,7 @@ interface VacancyCardProps {
 }
 
 const InfoRow = ({ label, value }: { label: string; value: string }) => (
-    <div className="text-sm font-light text-dark">
+    <div className="text-sm font-light">
         <span className="font-normal">{label}: </span>
 
         <span>{value}</span>
@@ -30,8 +30,8 @@ export const VacancyCard: React.FC<VacancyCardProps> = ({
     onApply,
 }) => {
     return (
-        <article className="bg-white rounded-lg py-5 px-4 max-w-[350px] w-full">
-            <h3 className="font-semibold text-lg text-dark mb-2">{title}</h3>
+        <article className="bg-white rounded-lg py-5 px-4 max-w-87.5 w-full">
+            <h3 className="font-semibold text-lg  mb-2">{title}</h3>
 
             <div className="flex flex-col gap-2 mb-4">
                 <InfoRow label="Уровень дохода" value={income} />
