@@ -1,0 +1,1 @@
+export { VacancyCardDetailed } from './VacancyCardDetailed';
