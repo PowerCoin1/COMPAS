@@ -1,8 +1,11 @@
+import { useState } from 'react';
+
 import { InternshipCard } from '../../components/InternshipCard';
 import { InternshipCardDetailed } from '../../components/InternshipCardDetailed';
 import { SearchBar } from '../../shared/ui/SearchBar/SearchBar';
 
 export const InternshipPage = () => {
+    const [showDetails, setShowDetails] = useState(false);
     const filters = [
         'Менеджер по продажам недвижимости',
         'Товаровед магазина',
@@ -46,16 +49,50 @@ export const InternshipPage = () => {
                     <button className="hover:text-blue transition hover:underline">зарплате</button>
                 </div>
 
-                <InternshipCard
-                    title="Стажер в отдел закупок"
-                    stipend="28 000 - 64 000 ₽"
-                    employmentType="Полная занятость"
-                    contractType="Трудовой договор"
-                    schedule="5/2"
-                    workHours="8"
-                    workFormat="На месте работодателя"
-                    onDetails={() => alert('Подробнее о стажировке')}
-                />
+                {!showDetails ? (
+                    <InternshipCard
+                        title="Стажер в отдел закупок"
+                        stipend="28 000 - 64 000 ₽"
+                        employmentType="Полная занятость"
+                        contractType="Трудовой договор"
+                        schedule="5/2"
+                        workHours="8"
+                        workFormat="На месте работодателя"
+                        onDetails={() => setShowDetails(true)}
+                    />
+                ) : (
+                    <InternshipCardDetailed
+                        title="Стажер в отдел закупок"
+                        stipendAmount="28 000 - 64 000 ₽"
+                        companyName="Компания"
+                        location="Белгород"
+                        responsibilities={[
+                            'Закупать товары по вверенной категории на наиболее выгодных условиях',
+                            'Изучать и анализировать рынок',
+                            'Искать и привлекать новых поставщиков',
+                            'Проводить переговоры и развивать деловые взаимоотношения',
+                            'Заключать договора',
+                            'Контролировать своевременную поставку',
+                        ]}
+                        requirements={[
+                            'Любите цифры, но умеете общаться и объяснять',
+                            'Знание Excel (формулы ВПР/ВПН)',
+                            'Аккуратность, ответственность и аналитический склад ума',
+                            'Коммуникабельность, финансовая грамотность',
+                            'Открытость к обучению',
+                        ]}
+                        benefits={[
+                            'График работы: 5/2 c 8.00 до 17.00 (сб, вс - выходной)',
+                            'Место работы: пр-т Богдана Хмельницкого 113 (центр города)',
+                            'Официальное трудоустройство по ТК РФ, выплата зарплаты 2 раза в месяц',
+                            'Выдача мясных наборов всем сотрудникам компании',
+                            'Доплата за стаж',
+                        ]}
+                        sourceUrl="https://rabota.magnit.ru"
+                        onApply={() => alert('Отклик отправлен!')}
+                        onDetails={() => setShowDetails(false)} // свернуть обратно
+                    />
+                )}
 
                 <InternshipCardDetailed
                     title="Агроном-стажер"
