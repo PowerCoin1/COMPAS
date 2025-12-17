@@ -1,3 +1,5 @@
+import { QrCodePage } from '../QrCodePage';
+
 export const LoginPage = () => {
-    return <div>LoginPage</div>;
+    return <QrCodePage />;
 };

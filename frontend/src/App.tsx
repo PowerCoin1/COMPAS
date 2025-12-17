@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 
+import { ProfileForm } from './components/ProfileForm';
 import { MainLayout } from './features/MainLayout';
 import { AssistancePage } from './pages/AssistancePage';
 import { HomePage } from './pages/HomePage';
@@ -17,6 +18,7 @@ function App() {
                 <Route path="/help" element={<AssistancePage />} />
                 <Route path="/login" element={<LoginPage />} />
                 <Route path="/vacancies" element={<VacancyPage />} />
+                <Route path="/loginpage" element={<ProfileForm />} />
                 <Route path="/internships" element={<InternshipPage />} />
             </Route>
         </Routes>
