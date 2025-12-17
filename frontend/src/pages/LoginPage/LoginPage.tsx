@@ -1,5 +1,5 @@
-import { ProfileForm } from '../../components/ProfileForm';
+import { QrCodePage } from '../QrCodePage';
 
 export const LoginPage = () => {
-    return <ProfileForm />;
+    return <QrCodePage />;
 };
