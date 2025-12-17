@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useSwipeable } from 'react-swipeable';
 
 import carouselImage1 from '../assets/images/carousel1.png';
 import carouselImage2 from '../assets/images/carousel2.png';
@@ -36,14 +37,26 @@ export const Carousel: React.FC = () => {
         setIsDetailsOpen(false);
     };
 
-    const currentSlide = slides[currentIndex];
+    // свайп обработчики
+    const handlers = useSwipeable({
+        onSwipedLeft: () => goTo(currentIndex + 1),
+        onSwipedRight: () => goTo(currentIndex - 1),
+        trackMouse: true, // можно и мышкой "таскать"
+    });
 
     return (
         <div className="w-full max-w-xl mx-auto">
-            <div className="rounded-md border border-secondary overflow-hidden bg-secondary flex flex-col transition-all duration-500 ease-in-out">
-                {/* Изображение слайда */}
-                <div className="px-4 py-10 flex-1">
-                    <img src={currentSlide.image} alt="Слайд" className="w-full h-auto object-cover rounded-md" />
+            <div {...handlers} className="rounded-md border border-secondary overflow-hidden bg-secondary flex flex-col">
+                {/* Слайды */}
+                <div className="relative w-full h-64 overflow-hidden">
+                    <div
+                        className="flex transition-transform duration-700 ease-in-out"
+                        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                    >
+                        {slides.map((slide) => (
+                            <img key={slide.id} src={slide.image} alt="Слайд" className="w-full h-full object-cover flex-shrink-0" />
+                        ))}
+                    </div>
                 </div>
 
                 {/* Блок "Подробнее" */}
@@ -81,8 +94,8 @@ export const Carousel: React.FC = () => {
                             type="button"
                             onClick={() => goTo(currentIndex - 1)}
                             className="w-10 h-10 rounded-full border-2 flex items-center justify-center transition
-                    border-dark-purple text-dark-purple
-                    hover:bg-dark-purple hover:text-white"
+                                border-dark-purple text-dark-purple
+                                hover:bg-dark-purple hover:text-white"
                         >
                             <span className="-ml-px -mt-px">&lt;</span>
                         </button>
@@ -96,7 +109,7 @@ export const Carousel: React.FC = () => {
                             onClick={() => goTo(currentIndex + 1)}
                             className="w-10 h-10 rounded-full border-2 flex items-center justify-center transition
                                 border-dark-purple text-dark-purple
-                    hover:bg-dark-purple hover:text-white"
+                                hover:bg-dark-purple hover:text-white"
                         >
                             <span className="ml-px -mt-px">&gt;</span>
                         </button>
