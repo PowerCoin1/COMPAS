@@ -1,36 +1,34 @@
 import React from 'react';
 
-import { VerificationIcon } from '../../assets/icons/VerificationIcon';
 import { Button } from '../../shared/ui';
 
 interface InternshipCardDetailedProps {
     title: string;
     stipendAmount?: string;
     stipendComment?: string;
-    tags: string[];
+    tags?: string[];
     companyName: string;
-    rating: number;
-    reviewsCount: number;
     location: string;
     responsibilities: string[];
     requirements: string[];
     benefits: string[];
+    sourceUrl?: string;
     onApply?: () => void;
+    onDetails?: () => void;
 }
 
 export const InternshipCardDetailed: React.FC<InternshipCardDetailedProps> = ({
     title,
     stipendAmount,
     stipendComment,
-    tags,
     companyName,
-    rating,
-    reviewsCount,
     location,
     responsibilities,
     requirements,
     benefits,
+    sourceUrl,
     onApply,
+    onDetails,
 }) => {
     return (
         <div className="bg-white rounded-lg py-5 px-4 max-w-[350px] w-full box-border">
@@ -41,27 +39,11 @@ export const InternshipCardDetailed: React.FC<InternshipCardDetailedProps> = ({
                 {stipendComment && <span className="text-dark font-light text-sm"> {stipendComment}</span>}
             </div>
 
-            <div className="flex gap-2 mb-3 flex-wrap">
-                {tags.map((tag, index) => (
-                    <span key={index} className="bg-lavender text-dark rounded-xs py-1 px-1.5 font-normal text-sm tracking-[-0.01em]">
-                        {tag}
-                    </span>
-                ))}
-            </div>
-
             <div className="flex items-center gap-1 mb-1.5">
-                <span className="font-medium text-sm uppercase text-dark">{companyName}</span>
-                <VerificationIcon className="block" />
+                <span className="font-medium text-sm uppercase text-gray">{companyName}</span>
+                <span className="text-gray/40 mx-1">|</span>
+                <span className="font-normal text-sm tracking-[-0.01em] text-gray mb-3 mt-3">{location}</span>
             </div>
-
-            <div className="flex items-center gap-1 mb-3.5 font-medium text-sm">
-                <span className="text-[#fbbf24] text-lg leading-none">★</span>
-                <span className="font-bold text-[#1a1a1a]">{rating}</span>
-                <span className="text-dark/40 mx-0.5">•</span>
-                <span className="text-dark/40">{reviewsCount} отзывов</span>
-            </div>
-
-            <div className="font-normal text-sm tracking-[-0.01em] text-dark mb-3">{location}</div>
 
             <div className="mb-6 text-dark font-light text-sm">
                 <h4 className="font-semibold mb-2">Обязанности:</h4>
@@ -86,8 +68,21 @@ export const InternshipCardDetailed: React.FC<InternshipCardDetailedProps> = ({
                 ))}
             </div>
 
+            {sourceUrl && (
+                <div className="flex items-center gap-2 p5 pb-4">
+                    <span className=" text-gray">2 месяца назад с</span>
+                    <a href={sourceUrl} target="_blank" rel="noopener noreferrer" className="text-blue hover:underline p5">
+                        rabota.magnit.ru
+                    </a>
+                    <span className="text-gray mx-1">|</span>
+                    <div color="blue" onClick={onDetails}>
+                        еще
+                    </div>
+                </div>
+            )}
+
             <Button color="red" size="sm" onClick={onApply}>
-                Откликнуться
+                Подробнее
             </Button>
         </div>
     );

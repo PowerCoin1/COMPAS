@@ -8,6 +8,7 @@ interface InternshipCardProps {
     schedule: string;
     workHours: string;
     workFormat: string;
+    tags?: string[];
     onDetails?: () => void;
 }
 
@@ -26,6 +27,7 @@ export const InternshipCard: React.FC<InternshipCardProps> = ({
     schedule,
     workHours,
     workFormat,
+    tags,
     onDetails,
 }) => {
     return (
@@ -40,6 +42,16 @@ export const InternshipCard: React.FC<InternshipCardProps> = ({
                 <InfoRow label="Рабочие часы" value={workHours} />
                 <InfoRow label="Формат работы" value={workFormat} />
             </div>
+
+            {tags && tags.length > 0 && (
+                <div className="flex gap-2 mb-4 flex-wrap">
+                    {tags.map((tag, idx) => (
+                        <span key={idx} className="bg-lavender text-dark rounded-xs py-1 px-2 text-sm">
+                            {tag}
+                        </span>
+                    ))}
+                </div>
+            )}
 
             <Button color="red" size="sm" onClick={onDetails}>
                 Подробнее

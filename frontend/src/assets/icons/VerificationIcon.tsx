@@ -8,9 +8,9 @@ export const VerificationIcon = ({ className }: { className?: string }) => {
             <path
                 d="M7.6001 10.7144C7.6001 10.7144 8.5601 11.236 9.0401 12C9.0401 12 10.4801 9 12.4001 8"
                 stroke="white"
-                stroke-width="1.2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="1.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
             />
         </svg>
     );

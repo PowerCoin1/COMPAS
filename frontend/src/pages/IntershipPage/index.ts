@@ -1,1 +1,0 @@
-export { InternshipPage } from './IntershipPage';
