@@ -1,4 +1,4 @@
-type colorVariant = 'red' | 'darkPurple';
+type colorVariant = 'red' | 'darkPurple' | 'blue';
 type sizeVariant = 'sm' | 'md';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -12,6 +12,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 const colorVariant = {
     red: 'bg-red hover:bg-dh-red',
     darkPurple: 'bg-dark-purple hover:bg-dh-purple',
+    blue: 'bg-blue hover:bg-dh-blue',
 };
 
 const sizeVariant = {

@@ -4,6 +4,7 @@ import { ProfileForm } from './components/ProfileForm';
 import { MainLayout } from './features/MainLayout';
 import { AssistancePage } from './pages/AssistancePage';
 import { HomePage } from './pages/HomePage';
+import { InternshipPage } from './pages/InternshipPage/InternshipPage';
 import { LoginPage } from './pages/LoginPage';
 import { ProgramPage } from './pages/ProgramPage';
 import { StatsPage } from './pages/StatsPage/StatsPage';
@@ -20,6 +21,7 @@ function App() {
                 <Route path="/vacancies" element={<VacancyPage />} />
                 <Route path="/loginpage" element={<ProfileForm />} />
                 <Route path="/stats" element={<StatsPage />} />
+                <Route path="/internships" element={<InternshipPage />} />
             </Route>
         </Routes>
     );
